@@ -1,0 +1,27 @@
+<h1>Express Sequelize Authentication Boilerplate</h1>
+<form>
+  {{#if user}}
+    <div class="form login-form">
+      <p>Welcome! <strong>{{user.username}}</strong></p>
+      <div class="buttons">
+        <a class="button logout" href="/logout">Logout</a>
+      </div>
+    </div>
+  {{else}}
+    <div class="form login-form">
+      <input type="text" name="username" placeholder="username">
+      <input type="text" name="password" placeholder="password">
+      <div class="buttons">
+         <a class="button login" href="/login">Login</a>
+      </div>
+    </div>
+    <div class="form signup-form">
+      <input type="text" name="username" placeholder="username">
+      <input type="text" name="email" placeholder="email">
+      <input type="text" name="password" placeholder="password">
+      <div class="buttons">
+       <a class="button signup" href="/register">Signup</a>
+      </div>
+    </div>
+  {{/if}}
+</form>

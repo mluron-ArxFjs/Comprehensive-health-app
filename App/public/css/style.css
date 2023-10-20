@@ -1,0 +1,80 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+   background-color: #B674C1;
+   }
+h2 {
+    background-color: red;
+  }
+
+#appbar {
+  margin: 5px;
+  letter-spacing: 0;
+}
+
+#image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#container {
+  background: #FAFAFA;
+  box-shadow: 0 2px 7px 0 rgb(0 0 0 / 16%);
+  margin: 5px 5px 5px 5px;
+}
+
+#card-body {
+  cursor:pointer;
+  box-shadow: 0 1px 4px 1px rgba(0,0,0,0.10);
+  border-radius: 4px;
+}
+
+#card-text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  color: #303030;
+}
+
+@media (min-width: 768px)
+{
+  .pie-chart,
+  .column-chart,
+  .line-chart{
+      margin-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width:375px)
+{
+  #Break-text, #Lunch-text, #Dinner-text, #Snack-text {
+      font-size: 12px;
+  }
+}
+@media only screen and (max-width:300px)
+{
+  .column-chart-area{
+      margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .chart-container {
+      padding: 0px 0px 15px 10px;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 514px) {
+  /* For portrait layouts only */
+  #card-body{
+      margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-2 {
+      margin-left: 8%;
+  } 
+}

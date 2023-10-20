@@ -1,0 +1,33 @@
+{
+  "name": "comprehensive-health-application",
+  "version": "1.0.0",
+  "description": "Manage your health stats",
+  "main": "server/server.js",
+  "author": "CHA",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server",
+    "db": "node models/index.js"
+  },
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "@syncfusion/ej2": "^22.2.9",
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.7",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "html": "^1.0.0",
+    "mysql2": "^3.3.5",
+    "sequelize": "^6.32.0",
+    "sequelize-auto-migrations": "^1.0.3",
+    "skeleton-screen-css": "^1.1.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.1"
+  }
+}

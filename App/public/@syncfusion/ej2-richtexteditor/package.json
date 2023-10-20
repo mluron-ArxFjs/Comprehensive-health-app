@@ -1,0 +1,75 @@
+{
+  "_from": "@syncfusion/ej2-richtexteditor@*",
+  "_id": "@syncfusion/ej2-richtexteditor@22.2.5",
+  "_inBundle": false,
+  "_integrity": "sha512-JD2rI4AXswHa0DJrFyCzhSMhCDLfixX6gyKis6hc0mBOTWXWMz7oMOLhTQeZ2MogDzr43av+HCSUk6GKF9ENgQ==",
+  "_location": "/@syncfusion/ej2-richtexteditor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-richtexteditor@*",
+    "name": "@syncfusion/ej2-richtexteditor",
+    "escapedName": "@syncfusion%2fej2-richtexteditor",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/",
+    "/@syncfusion/ej2",
+    "/@syncfusion/ej2-angular-richtexteditor",
+    "/@syncfusion/ej2-gantt",
+    "/@syncfusion/ej2-inplace-editor",
+    "/@syncfusion/ej2-pdfviewer",
+    "/@syncfusion/ej2-react-richtexteditor",
+    "/@syncfusion/ej2-vue-richtexteditor"
+  ],
+  "_resolved": "https://nexus.syncfusion.com/repository/ej2-hotfix-new/@syncfusion/ej2-richtexteditor/-/ej2-richtexteditor-22.2.5.tgz",
+  "_shasum": "fd9b305e9dcde612739e66a6accb774688e89e50",
+  "_spec": "@syncfusion/ej2-richtexteditor@*",
+  "_where": "/jenkins/workspace/elease-automation_release_21.1.1/packages/included",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-javascript-ui-controls/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-base": "~22.2.9",
+    "@syncfusion/ej2-buttons": "~22.2.9",
+    "@syncfusion/ej2-filemanager": "~22.2.5",
+    "@syncfusion/ej2-inputs": "~22.2.9",
+    "@syncfusion/ej2-navigations": "~22.2.8",
+    "@syncfusion/ej2-popups": "~22.2.9",
+    "@syncfusion/ej2-splitbuttons": "~22.2.8"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 RichTextEditor component",
+  "devDependencies": {},
+  "es2015": "./dist/es6/ej2-richtexteditor.es5.js",
+  "homepage": "https://www.syncfusion.com/javascript-ui-controls",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "HTML5-rich-text-editor",
+    "wysiwyg-html-editor",
+    "rich-text-editor",
+    "markdown-editor",
+    "wysiwyg-markdown-editor",
+    "editor"
+  ],
+  "license": "SEE LICENSE IN license",
+  "main": "./dist/ej2-richtexteditor.umd.min.js",
+  "module": "./index.js",
+  "name": "@syncfusion/ej2-richtexteditor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-javascript-ui-controls.git"
+  },
+  "typings": "index.d.ts",
+  "version": "22.2.9",
+  "sideEffects": false
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>BMI-BMR-Calculator</title>
+  <!-- Linking Your CSS Style File -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <h1>BMI Calculator</h1>
+  <div id="container">
+    <label for="weight-input" id="wlabel">Enter your weight (lbs/pounds):</label><input type="text" id="weight-input">
+    <label for="height-input" id="hlabel">Enter your height in inches (12 inches = 1 foot):</label><input type="text"
+      id="height-input">
+    <button id="btn">Calculate</button>
+    <label for="bmi-output" id="bmilabel">Your BMI:</label><input type="text" id="bmi-output">
+  </div>
+  <div id="table">
+    <table>
+      <caption>BMI Ranges</caption>
+      <tr>
+        <th>
+          <font color="yellow"> Underweight
+        </th>
+        <th>
+          <font color="#32CD32"> Healthy
+        </th>
+        <th>
+          <font color="#FF5F15"> Overweight
+        </th>
+        <th>
+          <font color="red"> Obese
+        </th>
+      </tr>
+      <tr>
+        <td>Below 18.5</td>
+        <td>18.5 & 24.9</td>
+        <td>25.0 & 29.9</td>
+        <td>Above 30.0</td>
+      </tr>
+      <input type="button" value="Clear form" onclick="clearForm()">
+    </table>
+  </div>
+</body>
+
+</html>
+
+<body>
+
+  <body style="background-color:#90ee90;">
+    <h1>BMR Calculator - Healthy Eating Tips</h1>
+    <form id="form">
+      <label for="gender">Gender:</label>
+      <select class="text" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age">
+      <br>
+      <label for="height">Height (in inches):</label>
+      <input type="number" id="height" name="height">
+      <br>
+      <label for="weight">Weight (in pounds):</label>
+      <input type="number" id="weight" name="weight">
+      <br>
+      <input type="button" value="Calculate" onclick="calculateBMR()">
+      <label for="bmr-output">Your BMR (with no physical activity):</label>
+      <span id="bmr-output"></span>
+      <br>
+      <input type="button" value="Clear form" onclick="clearForm()">
+    </form>
+    <br>
+    <h2>
+      <font color="black">
+        <font size=4> 1. 1/2 of each of your meals should be composed of vegetables or fruits. Aim for a variety
+          of colors.
+    </h2>
+    <h3>
+      <font color="black">
+        <font size=4> 2. Replace foods high in saturated fat with healthier options.
+    </h3>
+    <h4>
+      <font color="black">
+        <font size=2> Ex: Replace whole milk with skim milk, or replace butter with olive oil.
+          <h5>
+            <font color="black">
+              <font size=4> 3. Use natural sweeteners instead of added sugars. For instance, fruits and
+                honey are better alternatives to multiple teaspoons of suagr.
+          </h5>
+          <h6>
+            <font color="black">
+              <font size=4> 4. Consume less than 2,300 mg of sodium per day. Check nutrition labels and
+                protect your heart!
+          </h6>
+          <h6>
+            <font color="black">
+              <font size=4> 5. Choose water over sugary drinks! Water has 0 calories, regulates the body
+                temperature, and cleanses the body of wastes.
+          </h6>
+    </h4>
+    <!-- Linking Your JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,73 @@
+{
+  "_from": "@syncfusion/ej2-image-editor@*",
+  "_id": "@syncfusion/ej2-image-editor@22.2.8",
+  "_inBundle": false,
+  "_integrity": "sha512-6WPcvPi5XBy7XyIJ7KeheLKnK57kzOHblo7J6t0ZbBfgE/ASS8CXPeHLiVZzRmD/4B60w/brJm1AG6kUWfkyxA==",
+  "_location": "/@syncfusion/ej2-image-editor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-image-editor@*",
+    "name": "@syncfusion/ej2-image-editor",
+    "escapedName": "@syncfusion%2fej2-image-editor",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/",
+    "/@syncfusion/ej2",
+    "/@syncfusion/ej2-angular-image-editor",
+    "/@syncfusion/ej2-react-image-editor",
+    "/@syncfusion/ej2-vue-image-editor"
+  ],
+  "_resolved": "https://nexus.syncfusion.com/repository/ej2-hotfix-new/@syncfusion/ej2-image-editor/-/ej2-image-editor-22.2.8.tgz",
+  "_shasum": "60b9ce316cd35b0123adf204bc754c1c7fa2f53c",
+  "_spec": "@syncfusion/ej2-image-editor@*",
+  "_where": "/jenkins/workspace/elease-automation_release_21.1.1/packages/included",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-base": "~22.2.9",
+    "@syncfusion/ej2-buttons": "~22.2.9",
+    "@syncfusion/ej2-inputs": "~22.2.9",
+    "@syncfusion/ej2-navigations": "~22.2.8",
+    "@syncfusion/ej2-popups": "~22.2.9",
+    "@syncfusion/ej2-splitbuttons": "~22.2.8"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 ImageEditor",
+  "devDependencies": {},
+  "es2015": "./dist/es6/ej2-image-editor.es5.js",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "image editor",
+    "photo editor",
+    "photo viewer",
+    "javascript image editor",
+    "typescript image editor",
+    "syncfusion image editor",
+    "imageeditor",
+    "image manipulation tool",
+    "canvas image editor",
+    "web image editor",
+    "image editing software"
+  ],
+  "license": "SEE LICENSE IN license",
+  "main": "./dist/ej2-image-editor.umd.min.js",
+  "module": "./index.js",
+  "name": "@syncfusion/ej2-image-editor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/imageeditor"
+  },
+  "typings": "index.d.ts",
+  "version": "22.2.9",
+  "sideEffects": false,
+  "homepage": "https://www.syncfusion.com/javascript-ui-controls"
+}
