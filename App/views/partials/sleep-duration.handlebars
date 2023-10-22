@@ -1,4 +1,62 @@
-<div id="sleep-duration-info" class="hide row" style="margin-top: 90px; cursor: default">
+<div id="sleep-duration-info" class="hide" style="margin-top: 10px; cursor: default">
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" id="pie" style=" background:white; padding:15px">
+        <div id="pie-title"
+            style="cursor: default; margin-left: 15px; font-family: Roboto;  font-weight: 500; font-size: 20px; text-align: left; color: #1A1A1A">
+            <h2>Sleep Cycles Calculator😴</h2>
+        </div>
+        <select id="choice">
+        <option>I want to wake up at:</option>
+        <option>I want to go to sleep at:</option>
+    </select>
+
+    <br>
+
+    <select id="hour">
+        <option value="" selected disabled hidden>hour</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+
+    <select id="minute">
+        <option value="" selected disabled hidden>minute</option>
+        <option>00</option>
+        <option>05</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+        <option>35</option>
+        <option>40</option>
+        <option>45</option>
+        <option>50</option>
+        <option>55</option>
+    </select>
+
+    <select id="period">
+        <option value="" selected disabled hidden>period</option>
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+
+    <br>
+	<br>
+
+    <button onclick="calculate()">Calculate</button>
+  
+    <br>
+    <label id="instruction"></label>
+    <table id="times"></table>
     <div id="semi-pie">
         <div class="col-sm-12" id="pie" style="padding:0px">
             <div id="pie-title"

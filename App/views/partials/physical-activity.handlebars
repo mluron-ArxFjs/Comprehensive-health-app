@@ -1,30 +1,95 @@
-<div id="physical-activity-info" class="hide row" style="margin-top: 90px; cursor: default">
-            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center; color: #078411">
-                <p id="stepstext"
-                    style="font-family: Roboto; font-weight: 500; font-size: 36px;color: #078411;letter-spacing: 0;text-align: center; margin-bottom: 0px">
-                    <b>2869
-                    </b>
-                </p>
-                <span class="icon-steps" style="font-size: 12px"><span id="steps-subtext"
-                        style=" padding-left: 5%; font-family: Roboto;  font-weight: 400;  font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Steps</span></span>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center; color: #4F7305">
-                <p id="exercise"
-                    style="font-family: Roboto;  font-weight: 500; font-size: 36px;color: #4F7305;letter-spacing: 0;text-align: center; margin-bottom: 0px">
-                    <b>21
-                    </b>
-                </p>
-                <span class="icon-workout" style="font-size: 12px"><span id="exercise-text "
-                        style="padding-left: 5%; font-family: Roboto; font-weight: 400; font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Exercise/min</span></span>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center; color: #A1A621">
-                <p id="active"
-                    style="font-family: Roboto;  font-weight: 500; font-size: 36px;color: #A1A621;letter-spacing: 0;text-align: center; margin-bottom: 0px">
-                    <b>5
-                    </b>
-                </p>
-                <span class="icon-active" style="font-size: 12px"><span id="active-text "
-                        style="padding-left: 5%; font-family: Roboto; font-weight: 400; font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Active
-                        Hours</span>
-            </div>
+<div id="physical-activity-info" class="hide" style="margin-top: 10px; cursor: default">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="pie" style=" background:white; padding:15px">
+        <div id="pie-title"
+            style="cursor: default; margin-left: 15px; font-family: Roboto;  font-weight: 500; font-size: 20px; text-align: left; color: #1A1A1A">
+            <h2>BMI & BMR Calculator</h2>
         </div>
+        <div id="pie-wrapper" style="display:block; margin-bottom: 10px;">
+            <label for="weight-input" id="wlabel">Enter your weight (lbs/pounds):</label><input type="text"
+                id="weight-input">
+            <label for="height-input" id="hlabel">Enter your height in inches (12 inches = 1 foot):</label><input
+                type="text" id="height-input">
+            <button id="btn">Calculate</button>
+            <label for="bmi-output" id="bmilabel">Your BMI:</label><input type="text" id="bmi-output">
+            <br>
+            <input type="button" value="Clear form" onclick="clearForm()">
+        </div>
+        <div id="table">
+            <table>
+                <caption>BMI Ranges</caption>
+                <tr>
+                    <th>
+                        <font color="yellow"> Underweight
+                    </th>
+                    <th>
+                        <font color="#32CD32"> Healthy
+                    </th>
+                    <th>
+                        <font color="#FF5F15"> Overweight
+                    </th>
+                    <th>
+                        <font color="red"> Obese
+                    </th>
+                </tr>
+                <tr>
+                    <td>Below 18.5</td>
+                    <td>18.5 & 24.9</td>
+                    <td>25.0 & 29.9</td>
+                    <td>Above 30.0</td>
+                </tr>
+            </table>
+        </div>
+        <div id="pie-wrapper" style="display: block; margin-top:10px">
+        <form id="form">
+            <label for="gender">Gender:</label>
+            <select class="text" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br>
+            <label for="height">Height (in inches):</label>
+            <input type="number" id="height" name="height">
+            <br>
+            <label for="weight">Weight (in pounds):</label>
+            <input type="number" id="weight" name="weight">
+            <br>
+            <input type="button" value="Calculate" onclick="calculateBMR()">
+            <label for="bmr-output">Your BMR (with no physical activity):</label>
+            <span id="bmr-output"></span>
+            <br>
+            <input type="button" value="Clear form" onclick="clearForm()">
+        </form>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4" style="padding: 10px; text-align:center; color: #078411">
+            <p id="stepstext"
+                style="font-family: Roboto; font-weight: 500; font-size: 36px;color: #078411;letter-spacing: 0;text-align: center; margin-bottom: 0px">
+                <b>2869
+                </b>
+            </p>
+            <span class="icon-steps" style="font-size: 12px"><span id="steps-subtext"
+                    style=" padding-left: 5%; font-family: Roboto;  font-weight: 400;  font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Steps</span></span>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center; color: #4F7305">
+            <p id="exercise"
+                style="font-family: Roboto;  font-weight: 500; font-size: 36px;color: #4F7305;letter-spacing: 0;text-align: center; margin-bottom: 0px">
+                <b>21
+                </b>
+            </p>
+            <span class="icon-workout" style="font-size: 12px"><span id="exercise-text "
+                    style="padding-left: 5%; font-family: Roboto; font-weight: 400; font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Exercise/min</span></span>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center; color: #A1A621">
+            <p id="active"
+                style="font-family: Roboto;  font-weight: 500; font-size: 36px;color: #A1A621;letter-spacing: 0;text-align: center; margin-bottom: 0px">
+                <b>5
+                </b>
+            </p>
+            <span class="icon-active" style="font-size: 12px"><span id="active-text "
+                    style="padding-left: 5%; font-family: Roboto; font-weight: 400; font-size: 16px; color: #4A4A4A;letter-spacing: 0;text-align: center;">Active
+                    Hours</span>
+        </div>
+    </div>
+</div>
