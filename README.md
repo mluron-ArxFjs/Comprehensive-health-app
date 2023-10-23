@@ -1,7 +1,7 @@
 # Comprehensive-health-app
 ## Congression App Challenge 2023
-<p>Welcome to our Congressional App! This app will teach you about mental health and Self-care.We are so glad you've chosen to watch over yourself and take the steps to maintain your Well-being.</p>
-<p>The app will give you some daily goals and small activities you can in order do to watch after yourself. If you are struggling with mental health, you're not alone. In our Chatroom, you can chat with friends.</p>
+<p>Welcome to our Congressional App! This app will teach you about mental health and self-care.We are so glad you've chosen to watch over yourself and take the steps to maintain your well-being.</p>
+<p>The app will give you some daily goals and small activities you can do in order to watch after yourself. If you are struggling with mental health, you're not alone. In our Chatroom, you can chat with friends.</p>
 
 ## Video demo of the Health Tracker App
 Please see the link to the app's video demonstration here:
