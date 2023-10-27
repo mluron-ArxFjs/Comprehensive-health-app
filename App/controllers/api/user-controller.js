@@ -1,10 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
-const withAuth = require('../middleware/custom-auth-middleware')
+const withAuth = require('../../middleware/custom-auth-middleware')
 
 // Grab the User & AuthToken models from the models folder,
-const { User, AuthToken } = require('../models');
+const { User, AuthToken } = require('../../models');
 
 /* Register Route 
 ========================================================= */

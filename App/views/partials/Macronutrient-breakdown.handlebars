@@ -157,4 +157,61 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="row col-6">
+                <div class="row ml-auto">
+                    <div class="card text-white bg-secondary border-dark mt-5" style="width: 35rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Daily Meal Logger:</h2>
+                            <select class="form-control form-control-lg" id="mealSelector">
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="snack">Snack</option>
+                            </select>
+                            <div class="input-group mt-3 mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">Food:</span>
+                                </div>
+                                <input type="text" class="form-control" id="foodSearch" aria-describedby="basic-addon3">
+                            </div>
+                            <button type="button" class="btn btn-success" id="searchBtn">Search <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-auto">
+                    <div class="card text-white bg-secondary border-dark mt-5" id="searchCard" style="width: 60rem; height: 35rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Search Results:</h2>
+                            <div class="foodOptions">
+                                <ul class="list-group list-group-flush">
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption "
+                                        id="foodBtn0">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn1">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn2">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn3">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn4">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn5">Add</button>
+                                    <button type="button" class="btn btn-success hide mt-3 foodOption"
+                                        id="foodBtn6">Add</button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div class="mt-5" id="donutchart" style="width: 900px; height: 500px"></div>
+
+            </div>
+        </div>
+    </div>
+
 </div>

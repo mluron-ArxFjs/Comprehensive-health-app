@@ -26,7 +26,7 @@ function validInput(names) {
 function login(e) {
   e.preventDefault();
   if (!validInput(['username', 'password'])) return;
-  fetch('/api/login', {
+  fetch('/api/user/login', {
     headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     body: JSON.stringify({
@@ -46,7 +46,7 @@ function login(e) {
 function signup(e) {
   e.preventDefault();
   if (!validInput(['username', 'password', 'email'])) return;
-  fetch('/api/register', {
+  fetch('/api/user/register', {
     headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     body: JSON.stringify({
@@ -67,7 +67,7 @@ function signup(e) {
 
 function logout(e) {
   e.preventDefault();
-  fetch('/api/logout', {
+  fetch('/api/user/logout', {
     method: 'DELETE',
     data: {}
   }).then(user => {
