@@ -1,0 +1,21 @@
+{
+  "name": "comprehensive-health-app",
+  "version": "1.0.0",
+  "description": "<p>Welcome to our Congressional App! This app will teach you about mental health and self-care.We are so glad you've chosen to watch over yourself and take the steps to maintain your well-being.</p> <p>The app will give you some daily goals and small activities you can do in order to watch after yourself. If you are struggling with mental health, you're not alone. In our Chatroom, you can chat with friends.</p>",
+  "main": "App/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd App && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mluron-ArxFjs/Comprehensive-health-app.git"
+  },
+  "keywords": [],
+  "author": "Cambria Heights Academy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mluron-ArxFjs/Comprehensive-health-app/issues"
+  },
+  "homepage": "https://github.com/mluron-ArxFjs/Comprehensive-health-app#readme"
+}
