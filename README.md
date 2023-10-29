@@ -1,4 +1,6 @@
 # Comprehensive-health-app
+Link to the deployed App: https://comprehensive-health-app-68c288422bf3.herokuapp.com/
+
 ## Congression App Challenge 2023
 <p>Welcome to our Congressional App! This app will teach you about mental health and self-care.We are so glad you've chosen to watch over yourself and take the steps to maintain your well-being.</p>
 <p>The app will give you some daily goals and small activities you can do in order to watch after yourself. If you are struggling with mental health, you're not alone. In our Chatroom, you can chat with friends.</p>

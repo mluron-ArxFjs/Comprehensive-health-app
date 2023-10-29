@@ -22,6 +22,7 @@
     "hbs": "^4.2.0",
     "html": "^1.0.0",
     "mysql2": "^3.3.5",
+    "nutritionix": "^0.6.1",
     "sequelize": "^6.32.0",
     "sequelize-auto-migrations": "^1.0.3",
     "skeleton-screen-css": "^1.1.0",
