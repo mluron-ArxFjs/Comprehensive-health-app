@@ -238,12 +238,12 @@ td {
     justify-content: center;
   }
   .full {
-    background-color: var(--fill);
+    background-color:  #3494e3;
   }
   
   .cup-small.full {
-    background-color: var(--fill);
-    color: var(--light);
+    background-color:  #3494e3;
+    color:  #fffaff;
   }
   
   .remaining {
@@ -261,8 +261,8 @@ td {
   }
   
   .percentage {
-    background-color: var(--fill);
-    color: var(--light);
+    background-color: #3494e3;
+    color:  #fffaff;
     display: flex;
     align-items: center;
     justify-content: center;
