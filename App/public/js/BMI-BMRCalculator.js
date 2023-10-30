@@ -1,10 +1,13 @@
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function () {
+//let btn = document.getElementById('btn');
+var finalbmi;
+function calculateBMI() {
+    
     let weight = document.getElementById('weight-input').value;
     let height = document.getElementById('height-input').value;
     let finalbmi = (weight / (height * height) * 703);
     document.getElementById('bmi-output').value = finalbmi;
-});
+    return;
+};
 
 var bmr;
 function calculateBMR() {
@@ -24,12 +27,7 @@ function calculateBMR() {
     } else if (gender === 'female') {
         bmr = 655.1 + (4.35 * weight) + (4.7 * height) - (4.7 * age);
     }
-
     //render to the page
     document.getElementById('bmr-output').innerHTML = '<p> Your BMR is: ' + bmr.toFixed() + ' calories/days';
     return;
-}
-//Reload page when click on Clear Form
-function clearForm() {
-    document.location.reload()
 }
