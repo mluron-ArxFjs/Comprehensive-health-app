@@ -10,17 +10,26 @@ var breakfastCalItem = 0;
 var lunchCalItem = 0;
 var dinnerCalItem = 0;
 var snacksCalItem = 0;
-//var mealSelector = $("#mealSelector").val();
+
 //google.charts.load("current", { packages: ["corechart"] });
 // Save user info to local storage 
 //function userInfo() {
 //}
 
-// Call API to log food intake 
+// Call Nutritionix API to search the food intake 
+var mealSelector = document.getElementById('mealSelector').value;
+console.log("menu selected", mealSelector)
+
+function setText() {
+    var foodSearch = document.getElementById('foodSearch');
+    foodSearch.innerHTML = foodSearch;
+}
+console.log("food entry options", foodSearch);
+
 document.getElementById('searchBtn').click(foodLogger);
-function foodLogger() {
-    var foodSearch = $("#foodSearch").val().trim();
-    var queryURL = "https://api.nutritionix.com/v1_1/search" + foodSearch + "?results=0:20&fields=item_name,nf_calories&appId=ebe70e9f&appKey=fd53e313cdb8d5c240702e52977603c3";
+
+function foodLogger(foodSearch) {
+    var queryURL = "https://api.nutritionix.com/v1_1/search" + foodSearch + "?results=0:20&fields=item_name,nf_calories&appId=d46df7db&appKey=9b10ea9af86a9f3f51ca944b4a940db5";
     $.ajax({
         method: "GET",
         appkey: '9b10ea9af86a9f3f51ca944b4a940db5',
@@ -30,7 +39,7 @@ function foodLogger() {
     })
         .then(function (response) {
             var results = response.hits;
-            console.log(results)
+            console.log(results);
             for (var i = 0; i < 7; i++) {
                 console.log(results[i].fields.item_name)
                 console.log(results[i].fields.nf_calories)
@@ -57,7 +66,7 @@ function foodLogger() {
             $("#foodBtn5").attr("data-food-calories", response.hits[5].fields.nf_calories)
             $("#foodBtn6").attr("data-food-name", response.hits[6].fields.item_name);
             $("#foodBtn6").attr("data-food-calories", response.hits[6].fields.nf_calories)
-        
+
         });
 };
 //function userInfo() {
