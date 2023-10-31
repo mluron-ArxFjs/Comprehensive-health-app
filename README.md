@@ -45,6 +45,7 @@ Please include cover photos from your app!
 -![Screenshot](./App/public/assets/images/Screen-shot.png)
 
 ## Contact me
+I am a Computer Science Teacher, encouraging and supporting my students for the Congressional App Challenge.
 - [GitHub](https://github.com/mluron-ArxFjs)
 
 - ![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)mluron2@gmail.com

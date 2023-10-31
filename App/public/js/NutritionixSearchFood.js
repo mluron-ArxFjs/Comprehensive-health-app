@@ -18,55 +18,54 @@ var snacksCalItem = 0;
 
 // Call Nutritionix API to search the food intake 
 var mealSelector = document.getElementById('mealSelector').value;
-console.log("menu selected", mealSelector)
 
 function setText() {
     var foodSearch = document.getElementById('foodSearch');
     foodSearch.innerHTML = foodSearch;
 }
-console.log("food entry options", foodSearch);
 
-document.getElementById('searchBtn').click(foodLogger);
+document.getElementById('searchBtn').addEventListener('click', foodLogger);
 
 function foodLogger(foodSearch) {
-    var queryURL = "https://api.nutritionix.com/v1_1/search" + foodSearch + "?results=0:20&fields=item_name,nf_calories&appId=d46df7db&appKey=9b10ea9af86a9f3f51ca944b4a940db5";
+    const meal = {
+        foodSearch: $("#foodSearch").val().trim(),
+        mealSelector: $("#mealSelector").val().trim()
+    };
+    console.log("data sent to the backend", meal)
     $.ajax({
-        method: "GET",
-        appkey: '9b10ea9af86a9f3f51ca944b4a940db5',
-        appId: "d46df7db",
-        queryURL
-
+        method: "POST",
+        url: "api/nutritionix/search",
+        data: meal
     })
         .then(function (response) {
             var results = response.hits;
             console.log(results);
-            for (var i = 0; i < 7; i++) {
-                console.log(results[i].fields.item_name)
-                console.log(results[i].fields.nf_calories)
-            }
-            $(".hide").removeClass("hide");
-            $("#foodBtn0").text(response.hits[0].fields.item_name);
-            $("#foodBtn1").text(response.hits[1].fields.item_name);
-            $("#foodBtn2").text(response.hits[2].fields.item_name);
-            $("#foodBtn3").text(response.hits[3].fields.item_name);
-            $("#foodBtn4").text(response.hits[4].fields.item_name);
-            $("#foodBtn5").text(response.hits[5].fields.item_name);
-            $("#foodBtn6").text(response.hits[6].fields.item_name);
-            $("#foodBtn0").attr("data-food-name", response.hits[0].fields.item_name);
-            $("#foodBtn0").attr("data-food-calories", response.hits[0].fields.nf_calories)
-            $("#foodBtn1").attr("data-food-name", response.hits[1].fields.item_name);
-            $("#foodBtn1").attr("data-food-calories", response.hits[1].fields.nf_calories)
-            $("#foodBtn2").attr("data-food-name", response.hits[2].fields.item_name);
-            $("#foodBtn2").attr("data-food-calories", response.hits[2].fields.nf_calories)
-            $("#foodBtn3").attr("data-food-name", response.hits[3].fields.item_name);
-            $("#foodBtn3").attr("data-food-calories", response.hits[3].fields.nf_calories)
-            $("#foodBtn4").attr("data-food-name", response.hits[4].fields.item_name);
-            $("#foodBtn4").attr("data-food-calories", response.hits[4].fields.nf_calories)
-            $("#foodBtn5").attr("data-food-name", response.hits[5].fields.item_name);
-            $("#foodBtn5").attr("data-food-calories", response.hits[5].fields.nf_calories)
-            $("#foodBtn6").attr("data-food-name", response.hits[6].fields.item_name);
-            $("#foodBtn6").attr("data-food-calories", response.hits[6].fields.nf_calories)
-
+            // for (var i = 0; i < 7; i++) {
+            //     console.log(results[i].fields.item_name)
+            //     console.log(results[i].fields.nf_calories)
+            // }
+            // $(".hide").removeClass("hide");
+            // $("#foodBtn0").text(response.hits[0].fields.item_name);
+            // $("#foodBtn1").text(response.hits[1].fields.item_name);
+            // $("#foodBtn2").text(response.hits[2].fields.item_name);
+            // $("#foodBtn3").text(response.hits[3].fields.item_name);
+            // $("#foodBtn4").text(response.hits[4].fields.item_name);
+            // $("#foodBtn5").text(response.hits[5].fields.item_name);
+            // $("#foodBtn6").text(response.hits[6].fields.item_name);
+            // $("#foodBtn0").attr("data-food-name", response.hits[0].fields.item_name);
+            // $("#foodBtn0").attr("data-food-calories", response.hits[0].fields.nf_calories)
+            // $("#foodBtn1").attr("data-food-name", response.hits[1].fields.item_name);
+            // $("#foodBtn1").attr("data-food-calories", response.hits[1].fields.nf_calories)
+            // $("#foodBtn2").attr("data-food-name", response.hits[2].fields.item_name);
+            // $("#foodBtn2").attr("data-food-calories", response.hits[2].fields.nf_calories)
+            // $("#foodBtn3").attr("data-food-name", response.hits[3].fields.item_name);
+            // $("#foodBtn3").attr("data-food-calories", response.hits[3].fields.nf_calories)
+            // $("#foodBtn4").attr("data-food-name", response.hits[4].fields.item_name);
+            // $("#foodBtn4").attr("data-food-calories", response.hits[4].fields.nf_calories)
+            // $("#foodBtn5").attr("data-food-name", response.hits[5].fields.item_name);
+            // $("#foodBtn5").attr("data-food-calories", response.hits[5].fields.nf_calories)
+            // $("#foodBtn6").attr("data-food-name", response.hits[6].fields.item_name);
+            // $("#foodBtn6").attr("data-food-calories", response.hits[6].fields.nf_calories)
         });
 };
 //function userInfo() {
