@@ -31,19 +31,24 @@ function foodLogger(foodSearch) {
         foodSearch: $("#foodSearch").val().trim(),
         mealSelector: $("#mealSelector").val().trim()
     };
-    console.log("data sent to the backend", meal)
+   
     $.ajax({
         method: "POST",
         url: "api/nutritionix/search",
         data: meal
     })
         .then(function (response) {
-            var results = response.hits;
-            console.log(results);
-            // for (var i = 0; i < 7; i++) {
-            //     console.log(results[i].fields.item_name)
-            //     console.log(results[i].fields.nf_calories)
-            // }
+            var results = response.foods;
+            const map = new Map(Object.entries(results));
+     
+            const resultsSearchEl = document.querySelector('#basic-search');
+            const resultsCaloriesEl = document.querySelector('#basic-calories');
+            resultsSearchEl.textContent = (map.get('0').food_name);
+            resultsCaloriesEl.textContent =(map.get('0').nf_calories);
+            
+    })
+}
+    
             // $(".hide").removeClass("hide");
             // $("#foodBtn0").text(response.hits[0].fields.item_name);
             // $("#foodBtn1").text(response.hits[1].fields.item_name);
@@ -66,8 +71,7 @@ function foodLogger(foodSearch) {
             // $("#foodBtn5").attr("data-food-calories", response.hits[5].fields.nf_calories)
             // $("#foodBtn6").attr("data-food-name", response.hits[6].fields.item_name);
             // $("#foodBtn6").attr("data-food-calories", response.hits[6].fields.nf_calories)
-        });
-};
+        
 //function userInfo() {
 //}
 

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const NutritionixClient = require('nutritionix');
+const axios = require('axios');
 require('dotenv').config();
 
 const Nutritionix = new NutritionixClient({
@@ -8,8 +9,8 @@ const Nutritionix = new NutritionixClient({
     url: 'https://trackapi.nutritionix.com/v2/natural/nutrients',
 });
 
-var xAppId = "appId"; 
-var xAppKey = "appKey"; 
+var xAppId = process.env.NUTRITIONIX_APPID;
+var xAppKey = process.env.NUTRITIONIX_APPKEY;
 var xRemoteUserId = "0";
 var contentType = "application/json";
 
@@ -24,17 +25,26 @@ router.post('/search', async (req, res) => {
                 "x-app-key": xAppKey,
                 "x-remote-user-id": xRemoteUserId
             },
-            host: "trackapi.nutritionix.com",
-            path: "/v2/natural/nutrients?query=" + req.body.foodSearch + "&timezone=US/Central",
-            
-        }
+            host: "https://trackapi.nutritionix.com",
+            path: "/v2/natural/nutrients",
 
-        res.status(200).json(request);
-        console.log("food search results", res)
+        }
+        const results = await axios({
+            method: "POST",
+            headers: {
+                "Content-Type": contentType,
+                "x-app-id": xAppId,
+                "x-app-key": xAppKey,
+                "x-remote-user-id": xRemoteUserId
+            },
+            url: request.host + request.path,
+            data: {query: req.body.foodSearch}
+        });
+        res.status(200).json(results.data);
+
     } catch (error) {
         console.error(error);
         res.status(500).json({ error, message: 'Nutritionix failed to get the food search' });
     }
 });
-
 module.exports = router;
