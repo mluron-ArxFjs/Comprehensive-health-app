@@ -11,9 +11,9 @@ jtorres2@instructors.2u.com
 <p>The app will give you some daily goals and small activities you can do in order to watch after yourself. If you are struggling with mental health, you're not alone. In our Chatroom, you can chat with friends.</p>
 
 ## Video demo of the Health Tracker App
-Please see the link to the app's video demonstration here:
+Please see the link to the app's video demonstration here: https://drive.google.com/file/d/1m293CmEV_utDsmuEVfjvW03iNWeFRH62/view?usp=drive_link
 <br>
-Please listen to our podcast here:
+Please listen to our podcast here: https://drive.google.com/file/d/1BMkGAaiCYFG1iwmvQ943SzndBLhacp27/view?usp=drive_link
 
 ## Description of the Health Tracker App
 Please briefly describe what your app does?
